@@ -1,0 +1,38 @@
+@keyframes color-in {
+    0% {
+        background-color: red;
+    } 100% {
+        background-color: green;
+    }
+}
+
+@keyframes blur-in {
+    0% {
+        filter: blur(0px);
+    } 100% {
+        filter: blur(20px);
+    }
+}
+
+body {
+    background: green;
+
+    animation: color-in 2s ease-in;
+    -webkit-animation: color-in 2s ease-in;
+    -moz-animation: color-in 2s ease-in;
+    -o-animation: color-in 2s ease-in;
+}
+
+img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    filter: blur(20px);
+
+    animation: blur-in 2s ease-in;
+    -webkit-animation: blur-in 2s ease-in;
+    -moz-animation: blur-in 2s ease-in;
+    -o-animation: blur-in 2s ease-in;
+}
