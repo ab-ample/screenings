@@ -2,13 +2,15 @@ let first = document.querySelector('.seed');
 let str = 'La historia trata de la transformación del Barrio Chino de Barcelona a través de la vida de varias personas que transcurren en paralelo: la de un viejo marino en busca de habitación por este barrio, la de una joven prostituta y su novio, y la de unos trabajadores marroquíes obsesionados con la existencia de Dios.';
 let words = str.split(" ");
 let count = 0;
+let sound = new Audio('sounds/hammer.wav');
 
 // first.innerHTML = words[count];
 first.style.fontSize = (first.clientWidth / 6) + 'px';
 
-console.log(words);
-
 let addChild = (event) => {
+    sound.play();
+    
+
     parent = event.target;
     /*
     1. Get parent Witdh and Height
@@ -18,8 +20,6 @@ let addChild = (event) => {
 
     let previous = parent.innerHTML;
     parent.innerHTML = '';
-
-    console.log(parent.clientWidth);
 
     if (parent.clientWidth > parent.clientHeight) {
         let child_1 = document.createElement('div');
@@ -63,6 +63,7 @@ let addChild = (event) => {
         parent.appendChild(child_2);
     }
 
+    count = count >= words.length - 1 ? 0 : count++;
     event.stopPropagation();
 }
 

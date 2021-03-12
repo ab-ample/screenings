@@ -18,6 +18,10 @@ div.panel {
     color: limegreen;
 }
 
+div.block {
+    background: limegreen;
+}
+
 div.width {
     width: 100%;
     height: 50%;
