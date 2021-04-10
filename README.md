@@ -1,2 +1,2 @@
 # screenings
-A visual journal
+A visual journal for some movies I've watched.
